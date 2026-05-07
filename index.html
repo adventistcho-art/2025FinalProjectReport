@@ -86,65 +86,23 @@
 
         .controls {
             background: white;
-            padding: 20px;
+            padding: 25px;
             border-radius: 12px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             margin-bottom: 20px;
             display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
+            justify-content: center;
             align-items: center;
         }
 
-        .search-group {
-            display: flex;
-            gap: 0;
-            flex: 1;
-            min-width: 300px;
-        }
-
-        .search-group input {
-            padding: 10px 15px;
-            border: 2px solid #ddd;
-            border-radius: 8px 0 0 8px;
-            font-size: 1em;
-            flex: 1;
-            border-right: none;
-        }
-
-        .search-group input:focus {
-            outline: none;
-            border-color: #667eea;
-        }
-
-        .search-group button {
-            padding: 10px 30px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border: none;
-            border-radius: 0 8px 8px 0;
-            font-size: 1em;
-            font-weight: 600;
-            cursor: pointer;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-            white-space: nowrap;
-        }
-
-        .search-group button:hover {
-            box-shadow: 0 0 15px rgba(102, 126, 234, 0.4);
-        }
-
-        .search-group button:active {
-            transform: scale(0.98);
-        }
-
         .controls select {
-            padding: 10px 15px;
+            padding: 12px 20px;
             border: 2px solid #ddd;
             border-radius: 8px;
-            font-size: 1em;
-            flex: 1;
-            min-width: 200px;
+            font-size: 1.1em;
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
         }
 
         .controls select:focus {
@@ -235,16 +193,8 @@
                 font-size: 2em;
             }
 
-            .controls {
-                flex-direction: column;
-            }
-
-            .search-group {
-                width: 100%;
-            }
-
             .controls select {
-                width: 100%;
+                max-width: 100%;
             }
 
             table {
@@ -262,7 +212,7 @@
         <div class="header">
             <h1>2025학년도 사업결과보고서 작성현황 대시보드</h1>
             <div class="last-updated">
-                <span id="lastUpdated">2026.05.07. 09:26:35 현재</span>
+                <span id="lastUpdated">2026.05.07. 10:13:01 현재</span>
             </div>
         </div>
 
@@ -270,10 +220,6 @@
         </div>
 
         <div class="controls">
-            <div class="search-group">
-                <input type="text" id="searchInput" placeholder="🔍 예산부서명 또는 사업명으로 검색...">
-                <button id="searchButton">🔍 검색</button>
-            </div>
             <select id="deptFilter">
                 <option value="">예산부서를 선택하세요</option>
             </select>
@@ -651,54 +597,6 @@
     "사업": "해외교포 한국어 및 한국문화 단기연수 프로그램(국제교육원)",
     "사업관리구분": "성과관리사업",
     "미비항목": "2.사업내용, 3.환류, 4.차년도 실적 목표"
-  },
-  {
-    "부서명": "기획처",
-    "사업": "(혁신3)ICT 역량강화 교육환경 구축 및 운영(기획처)",
-    "사업관리구분": "항례적사업",
-    "미비항목": "1.원인행위, 2.사업내용, 3.환류"
-  },
-  {
-    "부서명": "기획처",
-    "사업": "경영성과 프로그램 개선(BI 고도화) 및 운영(기획처)",
-    "사업관리구분": "항례적사업",
-    "미비항목": "1.원인행위, 2.사업내용, 3.환류"
-  },
-  {
-    "부서명": "기획처",
-    "사업": "대학발전계획 추진(기획)(기획처)",
-    "사업관리구분": "항례적사업",
-    "미비항목": "1.원인행위, 2.사업내용, 3.환류"
-  },
-  {
-    "부서명": "기획처",
-    "사업": "보직자 대외활동 지원(기획처)",
-    "사업관리구분": "",
-    "미비항목": "1.원인행위, 2.사업내용, 3.환류, 4.차년도 실적 목표, 5.사업실적, 사업관리구분"
-  },
-  {
-    "부서명": "기획처",
-    "사업": "신앙 공동체 활동 지원(소그룹 연합 수련회)(기획처)",
-    "사업관리구분": "",
-    "미비항목": "1.원인행위, 2.사업내용, 3.환류, 4.차년도 실적 목표, 5.사업실적, 사업관리구분"
-  },
-  {
-    "부서명": "기획처",
-    "사업": "예비비(기획처)",
-    "사업관리구분": "항례적사업",
-    "미비항목": "1.원인행위, 2.사업내용, 3.환류"
-  },
-  {
-    "부서명": "기획처",
-    "사업": "정부 재정지원사업 참여TFT 운영(기획처)",
-    "사업관리구분": "항례적사업",
-    "미비항목": "1.원인행위, 2.사업내용, 3.환류"
-  },
-  {
-    "부서명": "기획처",
-    "사업": "학과 실무실습(기획처)",
-    "사업관리구분": "항례적사업",
-    "미비항목": "1.원인행위, 2.사업내용, 3.환류"
   },
   {
     "부서명": "대학혁신지원사업단",
@@ -1545,35 +1443,20 @@
         }
 
         function applyFilters() {
-            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
             const deptFilter = document.getElementById('deptFilter').value;
 
             // 예산부서가 선택되지 않으면 빈 배열
             if (!deptFilter) {
                 filteredData = [];
             } else {
-                filteredData = sampleData.filter(item => {
-                    const matchesSearch = !searchTerm || 
-                        item.부서명.toLowerCase().includes(searchTerm) ||
-                        item.사업.toLowerCase().includes(searchTerm);
-                    
-                    const matchesDept = item.부서명 === deptFilter;
-
-                    return matchesSearch && matchesDept;
-                });
+                filteredData = sampleData.filter(item => item.부서명 === deptFilter);
             }
 
             updateStats();
             renderTable();
         }
 
-        document.getElementById('searchButton').addEventListener('click', applyFilters);
         document.getElementById('deptFilter').addEventListener('change', applyFilters);
-        document.getElementById('searchInput').addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                applyFilters();
-            }
-        });
 
         populateDeptFilter();
         renderTable();
